@@ -9,8 +9,10 @@
     <ul>
     @foreach(Book b in Model.Books)
     {
-        <h3>@b.Author</h3>
+        <partial name="ProjectSummary" model="b"/> //calling partial view
+
     }
 </ul>
 
-<div page-model="@Model.PaginationInfo" page-action="Index"></div>
+<div page-model="@Model.PaginationInfo" page-action="Index" page-classes-enabled="true" page-class="btn"
+     page-class-normal="btn-outline-dark" page-class-selected="btn-primary"></div> 

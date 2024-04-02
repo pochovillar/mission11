@@ -1,0 +1,21 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model Book
+
+<!--Partial view to keep main code more organized (maybe similar to what react does-->
+<h2>@Model.Title</h2>
+<div class="card m-1 p-1"> <!--bootstrap styling-->
+    <div><span class="badge rounded-pill bg-primary text-white float-end">$@Model.Price</span></div>
+<ul>
+    <li>Author: @Model.Author</li>
+    <li>Publisher: @Model.Publisher</li>
+    <li>ISBN: @Model.Isbn</li>
+    <li>Category: @Model.Classification</li>
+    <li>Number of pages: @Model.PageCount</li>
+
+
+</ul>
+</div>

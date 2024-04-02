@@ -22,7 +22,7 @@ namespace mission11.Controllers
                  Books = _repo.Books
                 .OrderBy(x => x.Title)
                 .Skip((pageNum - 1) * pageSize)
-                .Take(pageSize),
+                .Take(pageSize), //select only 10 (in this case) records to display per page
 
                 PaginationInfo = new PaginationInfo
                 {   
@@ -35,7 +35,7 @@ namespace mission11.Controllers
         
 
 
-            return View(newData);
+            return View(newData); //returning the data queried to display in the pages
         }
 
 
